@@ -10,6 +10,9 @@ function keyFunction(event) {
     return x;
 }
 console.log(randomLetter);
+document.onkeypress = function (event) {
+    alert(event.key)
+};
 
 window.addEventListener("keydown", event => {
     if (event.key == randomLetter) {
