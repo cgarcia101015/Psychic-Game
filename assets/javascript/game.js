@@ -19,6 +19,3 @@ window.addEventListener("keydown", event => {
         document.body.style.background = "violet";
     }
 });
-/*for (var i = 0; i < letters.length; i++) {
-    
-};*/
