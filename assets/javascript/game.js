@@ -6,7 +6,7 @@ var guessesLeft = 10;
 var yourGuessesSoFar = [];
 
 function getRandomLetter () {
-    return alphabet[Math.floor(Math.random() * alphabet.length)];
+    return alphabet[Math.floor(Math.random() * alphabet.length)];
 }
 
 
@@ -14,21 +14,21 @@ function getRandomLetter () {
 
 
 document.onkeypress = function (event) {
-    var userGuess = event.key; 
-    console.log(userGuess);
+    var userGuess = event.key; 
+    console.log(userGuess);
 
-    if(userGuess === computerChoice) {
-        wins++;
-        document.getElementById("Wins:").innerHTML = wins;
-        getRandomLetter();
-        console.log(computerChoice);
-    }else {
-        guessesLeft--;
-        document.getElementById("Losses:").innerHTML = losses;
-    }
-    if (guessesLeft === 0) {
-        losses++;
-    }
+    if(userGuess === computerChoice) {
+        wins++;
+        document.getElementById("Wins:").innerHTML = wins;
+        getRandomLetter();
+        console.log(computerChoice);
+    }else {
+        guessesLeft--;
+        document.getElementById("Losses:").innerHTML = losses;
+    }
+    if (guessesLeft === 0) {
+        losses++;
+    }
 };
 
 
@@ -55,9 +55,9 @@ var guessedLetters = [];
 
 var alphabet =
 
-    ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q"
+    ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q"
 
-    ,"r","s","t","u","v","w","x","y","z"];
+    ,"r","s","t","u","v","w","x","y","z"];
 
 
 
@@ -77,91 +77,92 @@ console.log(computerChoice);
 
 document.onkeyup = function(event) {
 
-  var userChoice = event.key;
+  var userChoice = event.key;
 
-  // make sure the user selects a value a-z
+  // make sure the user selects a value a-z
 
-  var regexp = /[a-z]/gi;
+  var regexp = /[a-z]/gi;
 
-    if (!regexp.test(userChoice)) {
+    if (!regexp.test(userChoice)) {
 
-      alert("please enter a letter");
+      alert("please enter a letter");
 
-    }
+    }
 
-    else {
+    else {
 
-      console.log(userChoice);
+      console.log(userChoice);
 
-    }
+    }
 
-    // reset computer choice if the user loses
+    // reset computer choice if the user loses
 
-    if (guessesRemaining <= 0) {
+    if (guessesRemaining <= 0) {
 
-      lossCount++;
+      lossCount++;
 
-      document.getElementById("lossCount").innerHTML = lossCount++;
+      document.getElementById("lossCount").innerHTML = lossCount++;
 
-      console.log("You lost!");
+      console.log("You lost!");
 
-      alert("You lost!");
+      alert("You lost!");
 
-      guessesRemaining = 10;
+      guessesRemaining = 10;
 
-      guessedLetters = [];
+      guessedLetters = [];
 
-      document.getElementById("guessedLetters").innerHTML = guessedLetters;
+      document.getElementById("guessedLetters").innerHTML = guessedLetters;
 
-      document.getElementById("guessesRemaining").innerHTML = 10;
+      document.getElementById("guessesRemaining").innerHTML = 10;
 
-      randomIndex = Math.floor(Math.random() * alphabet.length);
+      randomIndex = Math.floor(Math.random() * alphabet.length);
 
-      computerChoice = alphabet[randomIndex];
+      computerChoice = alphabet[randomIndex];
 
-      console.log(computerChoice);
+      console.log(computerChoice);
 
-    }
+    }
 
-    // compares the randomly selected computer choice and user choice
+    // compares the randomly selected computer choice and user choice
 
-    if (computerChoice === userChoice) {
+    if (computerChoice === userChoice) {
 
-      console.log("You won!");
+      console.log("You won!");
 
-      alert("You won!");
+      alert("You won!");
 
-      document.getElementById("winCount").innerHTML = winCount++;
+      document.getElementById("winCount").innerHTML = winCount++;
 
-      guessedLetters = [];
+      guessedLetters = [];
 
-      document.getElementById("guessedLetters").innerHTML = guessedLetters;
+      document.getElementById("guessedLetters").innerHTML = guessedLetters;
 
-      randomIndex = Math.floor(Math.random() * alphabet.length);
+      randomIndex = Math.floor(Math.random() * alphabet.length);
 
-      computerChoice = alphabet[randomIndex];
+      computerChoice = alphabet[randomIndex];
 
-      console.log(computerChoice);
+      console.log(computerChoice);
 
-      guessesRemaining = 10;
+      guessesRemaining = 10;
 
-      document.getElementById("guessesRemaining").innerHTML = 10;
+      document.getElementById("guessesRemaining").innerHTML = 10;
 
-    } else {
+    } else {
 
-      console.log("Guess again!");
+      console.log("Guess again!");
 
-      document.getElementById("guessesRemaining").innerHTML = guessesRemaining--;
+      document.getElementById("guessesRemaining").innerHTML = guessesRemaining--;
 
-      guessedLetters.push(userChoice);
+      guessedLetters.push(userChoice);
 
-      document.getElementById("guessedLetters").innerHTML = guessedLetters;
+      document.getElementById("guessedLetters").innerHTML = guessedLetters;
 
-    }
+    }
 
 }
 
- 
+
+
 
 
 
@@ -171,5 +172,5 @@ document.onkeyup = function(event) {
 
 
 for (var i = 0; i < letters.length; i++) {
-    
+    
 };*/
